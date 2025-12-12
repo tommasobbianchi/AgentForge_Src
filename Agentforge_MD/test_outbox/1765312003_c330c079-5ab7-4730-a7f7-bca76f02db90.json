@@ -1,0 +1,11 @@
+{
+  "id": "c330c079-5ab7-4730-a7f7-bca76f02db90",
+  "timestamp": 1765312003.0207484,
+  "sender": "supervisor",
+  "payload": {
+    "action": "test_action",
+    "data": {
+      "foo": "bar"
+    }
+  }
+}

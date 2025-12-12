@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Console</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="icon">⚡</span> AGENTFORGE <span class="highlight">ANTIGRAVITY</span>
+            </div>
+            <div class="status-indicator">
+                <div class="pulse"></div>
+                <span id="system-status">ONLINE</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="command-center">
+                <h2><span class="icon">⌨️</span> Command Center</h2>
+                <div class="card">
+                    <div class="control-group">
+                        <button class="btn btn-primary" onclick="sendCommand('analyze_project')">
+                            <span class="btn-icon">🔍</span> Analyze Project
+                        </button>
+                        <button class="btn btn-secondary" onclick="sendCommand('heartbeat')">
+                            <span class="btn-icon">💓</span> Send Heartbeat
+                        </button>
+                        <button class="btn btn-secondary" onclick="sendCommand('run_diagnostics')">
+                            <span class="btn-icon">🩺</span> Run Diagnostics
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="activity-log">
+                <h2><span class="icon">📡</span> Live Activity Log</h2>
+                <div class="log-container" id="log-container">
+                    <div class="log-entry system">
+                        <span class="timestamp">--:--:--</span>
+                        <span class="content">System initialized. Waiting for data...</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

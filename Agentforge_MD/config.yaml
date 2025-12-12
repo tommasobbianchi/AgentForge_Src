@@ -1,0 +1,39 @@
+assistant:
+  require_confirmation: false
+  auto_chunk_payloads: true
+  auto_base64: true
+  verbose_status: true
+  heartbeat_interval_seconds: 120
+
+relay:
+  active_relay: "nativeserver"
+  relays:
+    nativeserver: "http://100.111.236.92:5100/agentforge"
+  allow_fallback: false
+  default_timeout: 8
+  chunk_size: 8192
+
+supervisor:
+  allowed_actions:
+    - analyze_project
+    - run_diagnostics
+    - plan_next_steps
+    - execute_agent
+  log_level: INFO
+  hardening:
+    enable_loop_try_except: true
+    enforce_action_validation: false
+
+bootstrap:
+  load_on_startup:
+    - "/mnt/data/state.md"
+    - "/mnt/data/todo.md"
+  auto_resync_manifest: false
+
+gpt_behavior:
+  mode: "supervisor"
+  disable_legacy_relay_paths: true
+  single_source_truth: "/mnt/data/config.yaml"
+
+version: "1.0"
+
