@@ -6,5 +6,5 @@
 
 ## Future Features
 - [ ] Add `/api/health` endpoint for more granular service checks.
-- [ ] Implement a dashboard UI in `web_interface/static/index.html` to visualize agent activity (currently static).
+- [x] Implement a dashboard UI in `web_interface/static/index.html` (Backend API `/api/dashboard` is active).
 - [ ] Sync `status.md` automatically with running services?
